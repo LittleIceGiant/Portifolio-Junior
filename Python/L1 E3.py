@@ -1,0 +1,1 @@
+print('Nome: Ismael Lima \nPeso:98 \nAltura: 2,03 \nIdade: 27')
