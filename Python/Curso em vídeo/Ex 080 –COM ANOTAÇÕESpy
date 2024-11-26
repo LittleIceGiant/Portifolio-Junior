@@ -1,0 +1,15 @@
+""" Crie um programa onde o usuário possa digitar cinco valores numéricos e cadastre-os em uma lista, já na posição correta de inserção (sem usar o sort()). No final, mostre a lista ordenada na tela. """
+
+listNum = []
+for i in range(0, 5):
+    valNum = int(input(f"{i + 1}º Número: "))
+    if i == 0 or valNum > listNum[-1]: #Aqui é possível economizar linhas de código devido a possibilidade de juntar duas condições em apenas uma.
+        listNum.append(valNum)
+    else:
+        cont = 0
+        while cont <= len(listNum):
+            if valNum < listNum[cont]:
+                listNum.insert(cont, valNum)
+                break
+        cont +=1
+print(listNum)
